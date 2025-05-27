@@ -1,3 +1,10 @@
 steps:
   - name: "bash"
     args: ["echo", "Hello, World!"]
+
+# カスタムサービスアカウントを使う場合は下記のように serviceAccount を指定
+serviceAccount: "my-service-account@my-project.iam.gserviceaccount.com"
+
+# ログバケットを指定せずに Cloud Logging のみに出力する例
+options:
+  logging: CLOUD_LOGGING_ONLY
